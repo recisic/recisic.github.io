@@ -1,1 +1,22 @@
-test
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>화학실험 1</title>
+</head>
+<body>
+
+<h2>화학실험 1(034.022-001) - 계산화학실습 1</h2>
+
+<h3>Energy 계산 - 입력 파일 만들기</h3>
+0.1Å부터 5.0Å까지 0.1Å 간격으로 N<sub>2</sub>와 F<sub>2</sub>에 대한 입력 파일을 생성합니다. 원자 및 그 거리 외의 다른 설정은 고정합니다.
+
+<script src="https://gist.github.com/recisic/ff98b3f366f833171ab46438f70dfddc.js"></script>
+
+<h3>Output 파일 분석 - 에너지 및 eigenvector 계수</h3>
+로그 파일이 input.log로 다운받아지므로 input(i).log 형식으로 순서대로 다운받으면 쉽게 iterate 할 수 있다는 점을 이용했습니다. 이후 각 파일에 대해 정규 표현식을 이용해서 에너지와 eigenvector를 구성하는 basis의 선형 결합 계수를 얻습니다. 그리고 얻어진 계수를 이용, 적절한 기준(calc 함수 부분)을 세워 어떤 에너지가 어떤 orbital에 해당하는지를 알아냅니다.
+
+<script src="https://gist.github.com/recisic/5884233c4cd8fa1c7f279575bba4f25b.js"></script>
+
+</body>
+</html>
